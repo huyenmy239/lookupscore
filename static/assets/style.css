@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #1D5D9B;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    position: relative;
+    margin: auto;
+}
+
+.content .title {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.content .form {
+    position: relative;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content input {
+    outline: none;
+    border: transparent;
+    font-size: 1.5rem;
+}
+
+.content .yearlabel {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.content #year {
+    margin-right: 1.2rem;
+}
+
+.content .searchbar {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    background-color: aliceblue;
+}
+
+.content .submit {
+    width: 15%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.content .submit:hover {
+    cursor: pointer;
+}
+
+.check {
+    position: absolute;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: red;
+    top: 100%;
+    left: 20%;
+}
