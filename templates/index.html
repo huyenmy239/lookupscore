@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './assets/style.css' %}">
+    <link rel="shortcut icon" href="{% static './assets/img/logo.ico' %}" type="image/x-icon">
+    <title>Tra cứu điểm thi Trung học Phổ thông Quốc gia</title>
+</head>
+<body>
+    <main>
+        <div class="content">
+            <h1 class = "title">Tra cứu điểm thi Trung học Phổ thông Quốc gia</h1>               
+            <form class = "form" method="POST" action="score">
+                {% csrf_token %}
+                <label class = "yearlabel" for="year">Năm:</label>
+                <select id="year" name="year">
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2023">2020</option>
+                    <option value="2022">2019</option>
+                    <option value="2021">2018</option>
+                    <!-- Add more options as needed -->
+                </select>
+                
+                <input class = "searchbar" name = "id" type="text" placeholder="Nhập số báo danh">
+                <input class = "submit" type="submit" value = "Tìm kiếm">
+            </form>
+            {% if is_available == 0 %}
+            <div class = "check">Số báo danh không khả dụng.</div>
+            {% endif %}
+        </div>
+    </main>
+</body>
+</html>

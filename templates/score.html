@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './assets/score.css' %}">
+    <link rel="shortcut icon" href="{% static './assets/img/logo.ico' %}" type="image/x-icon">
+    <title>Tra cứu điểm thi Trung học Phổ thông Quốc gia</title>
+</head>
+<body>
+    <main>
+        <div class="content">
+            <h1 class = "title">Kết quả</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Số báo danh</th>
+                        <th>Toán</th>
+                        <th>Ngữ Văn</th>
+                        <th>Anh Văn</th>
+                        <th>Vật Lý</th>
+                        <th>Hóa Học</th>
+                        <th>Sinh Học</th>
+                        <th>Lịch Sử</th>
+                        <th>Địa lý</th>
+                        <th>GDCD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ID}}</td>
+                        <td>{{Toan}}</td>
+                        <td>{{Van}}</td>
+                        <td>{{NgoaiNgu}}</td>
+                        <td>{{Ly}}</td>
+                        <td>{{Hoa}}</td>
+                        <td>{{Sinh}}</td>
+                        <td>{{Su}}</td>
+                        <td>{{Dia}}</td>
+                        <td>{{GDCD}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <form method = "POST" action=".\">
+                {% csrf_token %}
+                <input class = "backbtn" type="submit" value="Trở về">
+            </form>
+
+        </div>
+    </main>
+</body>
+</html>
